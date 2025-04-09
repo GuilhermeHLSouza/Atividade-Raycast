@@ -1,4 +1,4 @@
-![imagem Erupção vulcão]()
+<img src="https://github.com/GuilhermeHLSouza/Atividade-Raycast/blob/main/islandia-vulcao_widelg.jpg" alt="Minha Cena" width="100%" />
 
 # Atividade-Raycast
 
