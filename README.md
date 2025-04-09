@@ -15,13 +15,54 @@
 
 _________________________________________________________________
 
-# Video da cena:
+## Video da cena:
 
 [adicionar video]
 
 _________________________________________________________________
+## Explicação dos conceitos
 
 
 
 
 
+_________________________________________________________________
+## Explicação dos scripts
+
+- Câmera
+```csharp
+void Start() {
+    Debug.Log("Cena iniciada!");
+}
+```
+```csharp
+void Start() {
+    Debug.Log("Cena iniciada!");
+}
+```
+- Destroy
+```csharp
+void Start() {
+    Debug.Log("Cena iniciada!");
+}
+```
+- Player
+```csharp
+void Start() {
+    Debug.Log("Cena iniciada!");
+}
+```
+- Glapper
+```csharp
+void Start() {
+    Debug.Log("Cena iniciada!");
+}
+```
+
+
+_________________________________________________________________
+## Contribuição da dupla
+
+- Felipe: 
+
+- Guilherme: 
