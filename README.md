@@ -1,3 +1,5 @@
+![imagem Erupção vulcão]()
+
 # Atividade-Raycast
 
 >[!Important]
