@@ -22,14 +22,14 @@ _________________________________________________________________
 [adicionar video]
 
 _________________________________________________________________
-## Explicação dos conceitos
+## Explicação dos conceitos:
 
 
 
 
 
 _________________________________________________________________
-## Explicação dos scripts
+## Explicação dos scripts:
 
 - Câmera
 ```csharp
@@ -63,8 +63,15 @@ void Start() {
 
 
 _________________________________________________________________
-## Contribuição da dupla
+## Contribuição da dupla:
 
 - Felipe: 
 
 - Guilherme: 
+
+_________________________________________________________________
+## Refêrencias:
+
+[Skyboxes](https://assetstore.unity.com/packages/2d/textures-materials/sky/free-hdr-skyboxes-pack-175525)
+
+[Shaders Lava](https://assetstore.unity.com/packages/vfx/shaders/free-lava-shader-292492)
