@@ -20,19 +20,20 @@ _________________________________________________________________
 
 ## Video da cena:
 
-[adicionar video]
+https://github.com/user-attachments/assets/df62ed69-bf98-4ccf-acaa-c93b5a7989ae
 
 _________________________________________________________________
 ## Explicação dos conceitos:
 
-
-
+>- RayCast: RayCast é um raio que sai de um determinado ponto e vai até atingir algo. Na cena foi utilizado para verificar a posição que foi atingido e levar o player até ele  
+>- Destroy: Destroy é utilizado para destroir um GameObject. Na cena foi utilizado para destroir o player quando ele encosta no chão de lava  
+>- Prefab: Prefabs são objetos pré fabricados para ser utilizados sem ser nescessario ser feito alguma alteração. Na cena foi utilizado para criar o cenário de forma rápida e prática
 
 
 _________________________________________________________________
 ## Explicação dos scripts:
 
-- MovCam
+**- MovCam** <br/>
   Um script criado para impedir que a camera saia da posição dela
 ```csharp
 public class MoveCam : MonoBehaviour
@@ -41,15 +42,16 @@ public class MoveCam : MonoBehaviour
 
     void Update()
     {
-        transform.position = cameraPosition.position;
+        transform.position = cameraPosition.position; //Coloca a camera na posição expecificada anteriormente
     }
 }
 ```
-- PlayerCam
+**- PlayerCam**<br/>
   Controla a rotação da camera que está fixa no personagem 
 ```csharp
 public class PlayerCam : MonoBehaviour
 {
+    //Declaração de variáveis 
     public float sensX;
     public float sensY;
 
@@ -59,26 +61,28 @@ public class PlayerCam : MonoBehaviour
     public Transform orientation;
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked; //Bloqueia o cursor na tela 
+        Cursor.visible = false; //O cursor fica invisivel
     }
 
     void Update()
     {
+        //Pegando o sentido que está movimentando o mouse 
         float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensX;
         float mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sensY;
 
+        //puxando para variavel 
         yRotation += mouseX;
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
+        //aplicando cena
         transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
         orientation.rotation = Quaternion.Euler(0, yRotation, 0);
     }
 }
 ```
-- Ground
-
+**- Ground** <br/>
   Verifica quando o player encosta no chão 
 ```csharp
 public class DestroyPlayerOnTouch : MonoBehaviour
@@ -87,20 +91,21 @@ public class DestroyPlayerOnTouch : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag(playerTag))
+        if (other.CompareTag(playerTag)) //Verica se o player colidiu com o chão 
         {
-            Destroy(other.gameObject);
+            Destroy(other.gameObject); //Destroi o player quando ele encosta no chão com lava 
         }
     }
 }
 ```
-- Player
+**- Player** <br/>
  Configura a movimentação do player
  
 ```csharp
 
 public class PlayerMove : MonoBehaviour
 {
+    //Declaração de variáveis 
     public float moveSpeed;
     float jumpForce = 7f;
     float gravity = -20f;
@@ -136,6 +141,7 @@ public class PlayerMove : MonoBehaviour
     {
         if (freeze) return;
 
+        //Chamando os métodos
         GroundCheck();
         MyInput();
         HandleJump();
@@ -223,11 +229,12 @@ public class PlayerMove : MonoBehaviour
     }
 }
 ```
-- Glapper
+**- Grapple** <br/>
   Adiciona a funcionalidade do Raycast onde vai puxar o player para a posição atingida com um delay que pode ser alterado
 ```csharp
 public class Grappling : MonoBehaviour
 {
+    //Declaração de variáveis 
     private PlayerMove pm;
     public Transform cam;
     public Transform gunTip;
@@ -256,7 +263,7 @@ public class Grappling : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(grappleKey)) StartGrapple();
+        if (Input.GetKeyDown(grappleKey)) StartGrapple(); //verifica se o mouse foi clicado caso seja verdadeiro ele ativa ativa o método StartGrapple 
 
         if (grapplingCdTimer > 0)
             grapplingCdTimer -= Time.deltaTime;
@@ -335,13 +342,13 @@ public class Grappling : MonoBehaviour
 
 ```
 
-
 _________________________________________________________________
+
 ## Contribuição da dupla:
 
-- Felipe: 
+- Felipe: Criação da cena e aplicação dos conceitos
 
-- Guilherme: 
+- Guilherme: Revisão e documentação 
 
 _________________________________________________________________
 ## Refêrencias:
