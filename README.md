@@ -7,7 +7,7 @@
 >- Turma: 3°Mtec Desenvolvimento de Jogos Digitais.
 >- Escola: Etec Prof. Basilides de Godoy.
 >- Sobre: Atividade realizada em sala de aula com as duplas de laboratório, com o intuito de apresentar as habilidades aprendidas em aula.
->- Link do Google Drive: [colocar link] 
+>- Link do Google Drive: https://drive.google.com/drive/folders/1OABa5OcVCN5Xn1ZWHRXPi05XaW56zzwD 
 
 >[!Note]
  > ` - Dupla:`
