@@ -32,7 +32,7 @@ _________________________________________________________________
 ## Explicação dos scripts:
 
 - MovCam
-  
+  Um script criado para impedir que a camera saia da posição dela
 ```csharp
 public class MoveCam : MonoBehaviour
 {
@@ -45,6 +45,7 @@ public class MoveCam : MonoBehaviour
 }
 ```
 - PlayerCam
+  Controla a rotação da camera que está fixa no personagem 
 ```csharp
 public class PlayerCam : MonoBehaviour
 {
@@ -76,6 +77,8 @@ public class PlayerCam : MonoBehaviour
 }
 ```
 - Ground
+
+  Verifica quando o player encosta no chão 
 ```csharp
 public class DestroyPlayerOnTouch : MonoBehaviour
 {
@@ -91,7 +94,10 @@ public class DestroyPlayerOnTouch : MonoBehaviour
 }
 ```
 - Player
+ Configura a movimentação do player
+ 
 ```csharp
+
 public class PlayerMove : MonoBehaviour
 {
     public float moveSpeed;
@@ -217,6 +223,7 @@ public class PlayerMove : MonoBehaviour
 }
 ```
 - Glapper
+  Adiciona a funcionalidade do Raycast onde vai puxar o player para a posição atingida com um delay que pode ser alterado
 ```csharp
 public class Grappling : MonoBehaviour
 {
